@@ -1,0 +1,190 @@
+.hero {
+  position: relative;
+  min-height: max(500px, 85svh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-white);
+  text-align: center;
+  overflow: hidden;
+  padding: 5rem 0 5rem;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: 
+    url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  z-index: 0;
+  will-change: transform;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.95));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: 980px;
+}
+
+.tagline {
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.subHeadline {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  padding: 0 1rem;
+}
+
+.statPills {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.pillDivider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 0.5rem;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnOutline {
+  padding: 0.95rem 2rem;
+  border: 2px solid var(--bg-white);
+  color: var(--bg-white);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+  background: var(--bg-white);
+  color: var(--primary);
+}
+
+.btnSolid {
+  padding: 0.95rem 2rem;
+  background: var(--accent);
+  color: var(--bg-white);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btnSolid:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+}
+
+@media (max-width: 1366px) {
+  .hero {
+    min-height: max(450px, 85svh);
+    padding: 5rem 0 5rem;
+  }
+
+  .heroContent {
+    gap: 1.5rem;
+  }
+
+  .subHeadline {
+    max-width: 760px;
+  }
+
+  .pill {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 6.5rem 0 3rem;
+  }
+
+  .heroContent {
+    gap: 1.25rem;
+  }
+
+  .statPills {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 0.5rem;
+  }
+  
+  .pillDivider {
+    width: 60%;
+    height: 1px;
+    margin: 0.5rem 0;
+  }
+  
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .statPills {
+    padding: 1.25rem;
+  }
+}

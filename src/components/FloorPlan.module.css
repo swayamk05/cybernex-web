@@ -1,0 +1,259 @@
+.section {
+  padding: var(--section-space) 0;
+  background-color: var(--bg-offwhite);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--section-header-gap);
+}
+
+.title {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+  margin: 0 auto;
+}
+
+.content {
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+}
+
+.imageContainer {
+  width: 100%;
+  background: #E8EBEF;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: #dfe4ea;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+}
+
+.planImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slideOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 16, 26, 0.78) 100%);
+}
+
+.slideTitle {
+  color: var(--bg-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(8, 16, 26, 0.55);
+  color: var(--bg-white);
+  display: grid;
+  place-items: center;
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.navButton:hover {
+  background: rgba(8, 16, 26, 0.78);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prevButton {
+  left: 1rem;
+}
+
+.nextButton {
+  right: 1rem;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 3;
+}
+
+.paginationDot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.paginationDotActive {
+  background: var(--bg-white);
+  transform: scale(1.25);
+}
+
+.legendContainer {
+  padding: clamp(1.5rem, 3vw, 3rem);
+}
+
+.legendTitle {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.legendTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.legendTable th,
+.legendTable td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.legendTable th {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.legendTable th:first-child,
+.legendTable td:first-child {
+  width: 100px;
+  text-align: center;
+}
+
+.legendTable th:last-child,
+.legendTable td:last-child {
+  width: 100px;
+  text-align: center;
+}
+
+.legendTable tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.legendTable tbody tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+.legendTable tbody tr:hover {
+  background-color: #f0f4f8;
+}
+
+.legendTable td {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    padding: 1.5rem;
+  }
+
+  .legendContainer {
+    padding: 1.5rem;
+  }
+
+  .legendTable th,
+  .legendTable td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: var(--section-space-tight) 0;
+  }
+
+  .imageContainer {
+    padding: 1rem;
+  }
+
+  .slideTitle {
+    font-size: 0.85rem;
+  }
+
+  .navButton {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+
+  .prevButton {
+    left: 0.65rem;
+  }
+
+  .nextButton {
+    right: 0.65rem;
+  }
+
+  .legendTitle {
+    font-size: 1.3rem;
+  }
+
+  .legendTable th,
+  .legendTable td {
+    font-size: 0.85rem;
+  }
+}

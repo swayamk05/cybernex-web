@@ -1,0 +1,88 @@
+@import "./styles/animations.css";
+
+:root {
+  --primary: #0A192F;
+  --accent: #C5A059;
+  --accent-hover: #D8B26B;
+  --bg-white: #FFFFFF;
+  --bg-offwhite: #F8F9FA;
+  --bg-clean: #F4F6F8;
+  --text-dark: #333333;
+  --text-light: #F8F9FA;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-strong: 0 15px 40px rgba(0, 0, 0, 0.1);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --section-space: clamp(4rem, 6vw, 6rem);
+  --section-space-tight: clamp(3.25rem, 5vw, 4.5rem);
+  --section-header-gap: clamp(2rem, 4vw, 4rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 2.8vw, 2rem);
+}
+
+@media (max-width: 1366px) {
+  :root {
+    --section-space: clamp(3.5rem, 5vw, 5rem);
+    --section-space-tight: clamp(3rem, 4vw, 4rem);
+    --section-header-gap: clamp(1.75rem, 3vw, 3rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
