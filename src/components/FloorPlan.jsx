@@ -3,6 +3,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './FloorPlan.module.css';
 
+import imgProposedPlan from '../asset/proposed-plan-1.png';
+import imgMain from '../asset/image.png';
+
 const FloorPlan = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [activeSlide, setActiveSlide] = useState(0);
@@ -12,13 +15,13 @@ const FloorPlan = () => {
     {
       id: 1,
       title: '3D Proposed Layout',
-      src: 'src/asset/proposed-plan-1.png',
+      src: imgProposedPlan,
       alt: '3D office layout for the proposed plan section',
     },
     {
       id: 2,
       title: 'Typical Floor Plan',
-      src: 'src/asset/image.png',
+      src: imgMain,
       alt: 'Typical office floor plan drawing for the proposed plan section',
     },
   ];

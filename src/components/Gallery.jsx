@@ -8,10 +8,8 @@ import imgBuilding2 from '../asset/building 2.png';
 import imgBuilding3 from '../asset/building 3.png';
 import imgBuilding4 from '../asset/building 4.png';
 import imgBuilding from '../asset/building.png';
-import imgMain from '../asset/image.png';
 import imgLiftLobby from '../asset/lift lobby.png';
 import imgParking from '../asset/parking.png';
-import imgProposedPlan from '../asset/proposed-plan-1.png';
 
 const images = [
   { id: 1, group: 'Exterior', url: imgBuilding, span: 'span 2' },
@@ -21,7 +19,6 @@ const images = [
   { id: 6, group: 'Parking Area', url: imgParking, span: 'span 1' },
   { id: 7, group: 'Modern Design', url: imgBuilding4, span: 'span 1' },
   { id: 8, group: 'About Cybernex', url: imgAbout, span: 'span 2' },
-
 ];
 
 const Gallery = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './About.module.css';
+import buildingImg from '../asset/building.png';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -37,7 +38,7 @@ const About = () => {
         >
           <div className={styles.imageBlock}>
             <div className={styles.imageInner}>
-              <img src="src/asset/building.png" alt="Corporate Office" />
+              <img src={buildingImg} alt="Corporate Office" />
             </div>
           </div>
         </motion.div>
