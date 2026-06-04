@@ -178,25 +178,54 @@
   }
 
   .contentGrid {
-    padding: 0 1.5rem 2.5rem 1.5rem;
+    padding: 0 1.25rem 2.5rem 1.25rem;
+    gap: 2rem;
   }
   
   .cardHeader {
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 2.5rem 1.25rem 1.5rem 1.25rem;
   }
   
   .termsList li {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .label {
+    font-size: 0.85rem;
   }
   
   .value {
     text-align: left;
     max-width: 100%;
+    font-size: 0.95rem;
   }
 
   .highlightBox {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .highlightValue {
+    font-size: 2rem;
+    word-break: break-word;
+    margin-bottom: 0.5rem;
+  }
+
+  .perMonth {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .highlightDisclaimer {
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .enquireBtn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
