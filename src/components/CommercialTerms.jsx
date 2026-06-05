@@ -57,7 +57,7 @@ const CommercialTerms = () => {
                 </li>
                 <li>
                   <span className={styles.label}>Parking (Included)</span>
-                  <span className={styles.value}>2 four-wheelers + 20 two-wheelers</span>
+                  <span className={styles.value}>four-wheelers + two-wheelers</span>
                 </li>
                 <li>
                   <span className={styles.label}>Additional Parking</span>
