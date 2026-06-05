@@ -10,11 +10,12 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 1rem 0;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .navContainer {
@@ -186,12 +187,13 @@
 
 .progressBar {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  height: 3px;
+  height: 2px;
   background: var(--accent);
   width: 100%;
   transform-origin: left;
+  z-index: 1002;
 }
 
 @media (max-width: 900px) {

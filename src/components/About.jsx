@@ -15,9 +15,9 @@ const About = () => {
       <div className={`container ${styles.aboutGrid}`} ref={ref}>
         <motion.div 
           className={styles.textContent}
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h4 className={styles.subtitle}>WHO WE ARE</h4>
           <h2 className={styles.title}>The Mudhol Land Holdings<br/>Company Pvt. Ltd.</h2>
@@ -32,9 +32,9 @@ const About = () => {
         
         <motion.div 
           className={styles.imageWrapper}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.9, y: 40 }}
+          animate={inView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 40 }}
+          transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <div className={styles.imageBlock}>
             <div className={styles.imageInner}>

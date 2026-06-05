@@ -24,8 +24,8 @@ const CommercialTerms = () => {
             <div className={styles.leftCol}>
               <ul className={styles.termsList}>
                 <li>
-                  <span className={styles.label}>BU Area</span>
-                  <span className={styles.value}>7,320 Sq Ft — 5th Floor</span>
+                  <span className={styles.label}>Build up Area</span>
+                  <span className={styles.value}>50000 Sq Ft</span>
                 </li>
                 <li>
                   <span className={styles.label}>Rate</span>

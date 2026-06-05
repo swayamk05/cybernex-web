@@ -41,13 +41,13 @@ const PropertySnapshot = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { num: 7320, label: 'Sq Ft', desc: '5th Floor' },
-    { num: 185, label: 'Workstations', desc: 'Plug & Play' },
-    { num: 3, label: 'Meeting Rooms', desc: 'Modern' },
-    { num: 8, label: 'TL Desks', desc: 'Dedicated' },
-    { num: 100, suffix: '%', label: 'DG Backup', desc: 'Uninterrupted' },
-    { num: 1, suffix: ' KM', label: 'To Metro', desc: 'Swargate' },
-  ];
+  { num: 50000, suffix: '+', label: 'Commercial Sq Ft', desc: 'Premium Workspace' },
+  { num: 7, suffix: '+', label: 'Office Floors', desc: 'Scalable Occupancy' },
+  { num: 185, suffix: '+', label: 'Seats Per Floor', desc: 'Plug & Play Offices' },
+  { num: 100, suffix: '%', label: 'Power Backup', desc: 'Zero Downtime' },
+  { num: 1, suffix: ' KM', label: 'Metro Access', desc: 'Strategic Location' },
+  { num: 24, suffix: '/7', label: 'Security', desc: 'Managed Premises' },
+];
 
   return (
     <section className={styles.section} ref={ref}>

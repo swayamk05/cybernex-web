@@ -26,18 +26,7 @@ const FloorPlan = () => {
     },
   ];
 
-  const legendData = [
-    { id: 1, name: "Agents Desk", qty: 7 },
-    { id: 2, name: "Workstation", qty: 185 },
-    { id: 3, name: "Working Cubicles", qty: 2 },
-    { id: 4, name: "Meeting Room", qty: 3 },
-    { id: 5, name: "Training Room", qty: 1 },
-    { id: 6, name: "Low-Height Storage", qty: 6 },
-    { id: 7, name: "Full-Height Storage", qty: 6 },
-    { id: 8, name: "Team Leaders Desk", qty: 8 },
-    { id: 9, name: "Centre Manager's Cabin", qty: 1 },
-  ];
-
+  
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setDirection(1);
@@ -95,7 +84,7 @@ const FloorPlan = () => {
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
@@ -154,29 +143,7 @@ const FloorPlan = () => {
             </div>
           </div>
 
-          <div className={styles.legendContainer}>
-            <h3 className={styles.legendTitle}>Furniture Legend</h3>
-            <div className={styles.tableWrapper}>
-              <table className={styles.legendTable}>
-                <thead>
-                  <tr>
-                    <th>Sr. No</th>
-                    <th>Description</th>
-                    <th>Qty</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {legendData.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.id}</td>
-                      <td>{item.name}</td>
-                      <td>{item.qty}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+         
         </motion.div>
       </div>
     </section>
