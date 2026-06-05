@@ -42,7 +42,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <div className={styles.pill}>7,320 Sq Ft</div>
+          <div className={styles.pill}>50,000 Sq Ft</div>
           <div className={styles.pillDivider}></div>
           <div className={styles.pill}>185 Workstations</div>
           <div className={styles.pillDivider}></div>
