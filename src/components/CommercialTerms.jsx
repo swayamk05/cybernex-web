@@ -28,14 +28,6 @@ const CommercialTerms = () => {
                   <span className={styles.value}>50000 Sq Ft</span>
                 </li>
                 <li>
-                  <span className={styles.label}>Rate</span>
-                  <span className={styles.value}>₹100/- per sq ft/month + taxes</span>
-                </li>
-                <li>
-                  <span className={styles.label}>Maintenance</span>
-                  <span className={styles.value}>₹10/- per sq ft/month + taxes</span>
-                </li>
-                <li>
                   <span className={styles.label}>Security Deposit</span>
                   <span className={styles.value}>6 months' rent</span>
                 </li>
@@ -65,15 +57,10 @@ const CommercialTerms = () => {
                 </li>
               </ul>
             </div>
-            
-            <div className={styles.rightCol}>
-              <div className={styles.highlightBox}>
-                <span className={styles.highlightLabel}>Base Rent</span>
-                <span className={styles.highlightValue}>₹7,32,000<span className={styles.perMonth}>/month</span></span>
-                <span className={styles.highlightDisclaimer}>*Excluding taxes & maintenance</span>
-                <a href="#contact" className={styles.enquireBtn}>Request a Callback</a>
-              </div>
-            </div>
+          </div>
+          
+          <div className={styles.cardFooter}>
+            <a href="https://wa.me/919527320624" target="_blank" rel="noopener noreferrer" className={styles.enquireBtn}>Request a Callback</a>
           </div>
         </motion.div>
       </div>

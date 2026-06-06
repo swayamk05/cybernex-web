@@ -41,9 +41,10 @@ const PropertySnapshot = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-  { num: 50000, suffix: '+', label: 'Commercial Sq Ft', desc: 'Premium Workspace' },
-  { num: 7, suffix: '+', label: 'Office Floors', desc: 'Scalable Occupancy' },
-  { num: 185, suffix: '+', label: 'Seats Per Floor', desc: 'Plug & Play Offices' },
+  { num: 50000, label: 'Sq Ft', desc: 'Premium Workspace' },
+  { num: 7, label: 'Office Floors', desc: 'Scalable Occupancy' },
+  { num: 2, label: 'Parking Floors', desc: 'Convenient Access' },
+  { num: 100, suffix: '+', label: 'Seats Per Floor', desc: 'Flexible Layouts' },
   { num: 100, suffix: '%', label: 'Power Backup', desc: 'Zero Downtime' },
   { num: 1, suffix: ' KM', label: 'Metro Access', desc: 'Strategic Location' },
   { num: 24, suffix: '/7', label: 'Security', desc: 'Managed Premises' },

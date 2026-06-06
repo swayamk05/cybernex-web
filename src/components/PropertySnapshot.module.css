@@ -61,6 +61,34 @@
   letter-spacing: 0.5px;
 }
 
+@media (min-width: 1024px) {
+  .grid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 1.5rem; /* Space for scrollbar */
+  }
+  
+  /* Custom scrollbar for desktop */
+  .grid::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+  .grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  .grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+  }
+
+  .card {
+    width: calc(14.28% - 0.75rem); /* Fit 7 cards if screen is wide enough */
+    min-width: 150px;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     margin-top: -40px;

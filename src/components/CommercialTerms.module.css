@@ -11,7 +11,6 @@
   position: relative;
 }
 
-/* Background pattern */
 .card::before {
   content: '';
   position: absolute;
@@ -45,14 +44,14 @@
 
 .contentGrid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
   padding: 0 clamp(1.5rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem);
-  gap: clamp(2rem, 4vw, 4rem);
 }
 
 .leftCol {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding-right: clamp(1.5rem, 3vw, 3rem);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .termsList {
@@ -87,54 +86,12 @@
   max-width: 60%;
 }
 
-.rightCol {
+.cardFooter {
+  padding: 2rem clamp(1.5rem, 4vw, 4rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.highlightBox {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(197, 160, 89, 0.3);
-  padding: clamp(2rem, 3vw, 3rem);
-  border-radius: 12px;
-  text-align: center;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.highlightLabel {
-  display: block;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.highlightValue {
-  display: block;
-  color: var(--bg-white);
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-.perMonth {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.highlightDisclaimer {
-  display: block;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .enquireBtn {
@@ -146,7 +103,6 @@
   font-weight: 600;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  width: 100%;
 }
 
 .enquireBtn:hover {
@@ -155,77 +111,37 @@
   box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
 }
 
-@media (max-width: 1024px) {
-  .contentGrid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 0 2.5rem 2.5rem;
-  }
-  
-  .cardHeader {
-    padding: 2.5rem 2.5rem 1.5rem;
-  }
-
-  .leftCol {
-    border-right: none;
-    padding-right: 0;
-  }
-}
-
 @media (max-width: 600px) {
   .section {
     padding: var(--section-space-tight) 0;
   }
-
   .contentGrid {
     padding: 0 1.25rem 2.5rem 1.25rem;
-    gap: 2rem;
   }
-  
   .cardHeader {
     padding: 2.5rem 1.25rem 1.5rem 1.25rem;
   }
-  
   .termsList li {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
     padding-bottom: 0.75rem;
   }
-
   .label {
     font-size: 0.85rem;
   }
-  
   .value {
     text-align: left;
     max-width: 100%;
     font-size: 0.95rem;
   }
-
-  .highlightBox {
-    padding: 1.5rem 1rem;
+  .cardFooter {
+    padding: 1.5rem;
   }
-
-  .highlightValue {
-    font-size: 2rem;
-    word-break: break-word;
-    margin-bottom: 0.5rem;
-  }
-
-  .perMonth {
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.25rem;
-  }
-
-  .highlightDisclaimer {
-    font-size: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-
   .enquireBtn {
     padding: 0.85rem 1.5rem;
     font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
   }
 }
